@@ -27,8 +27,14 @@ console.log(result4); // true
 
 *******************************************************************************/
 
-let exactly = function() {
-
+let exactly = function(arr, number, cb) {
+    let newArr = [];
+    for(let val of arr){
+        if(cb(val)){
+            newArr.push(val)
+        }
+    }
+    return newArr.length === number
 };
 
 

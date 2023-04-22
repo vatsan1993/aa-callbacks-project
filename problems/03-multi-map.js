@@ -21,10 +21,17 @@ let result3 = multiMap("hi", 5, function(s) {
 console.log(result3); // hi!!!!!
 *******************************************************************************/
 
-let multiMap = function() {
+let multiMap = function(val, num, cb) {
+  for(let i = 0; i < num; i++){
+    if(typeof val === 'string'){
+      val = cb(val);
+    }else{
+      val = cb(val);
+    }
+  }
 
+  return val;
 };
-
 
 
 

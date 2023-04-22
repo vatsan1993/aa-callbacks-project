@@ -21,8 +21,14 @@ let hasA = function(s) {
 console.log(reject(['breadth', 'GRAPH', 'depth', 'height'], hasA)); // [ 'depth', 'height' ]
 *******************************************************************************/
 
-let reject = function() {
-
+let reject = function(arr, cb) {
+    let newArr = [];
+    for(let val of arr){
+        if(!cb(val)){
+            newArr.push(val);
+        }
+    }
+    return newArr;
 };
 
 
